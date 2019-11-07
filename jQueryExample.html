@@ -8,7 +8,7 @@
                 font-size: 32px;
             }
             
-            #dropzone {
+            .dropzone {
                 top: 150px;
                 width: 200px;
                 height: 200px;
@@ -22,18 +22,30 @@
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
     <div>Drag Winston into the rectangle</div>
     <img id="winston" src="https://www.kasandbox.org/programming-images/creatures/Winston.png">
-    <div id="dropzone"></div>
+    <div style = "float:left;">
+        <div class= "dropzone" id="right_dropzone"></div>
+        <div class= "dropzone" id="wrong_dropzone"></div>
+    </div>
+
+
     <script>
         $("#winston").draggable();
-        $("#dropzone").droppable({
-            drop: function(event, ui) {
-                $(this).css('background', 'rgb(0,200,0)');
-            },
+        $(".dropzone").droppable({
             over: function(event, ui) {
                 $(this).css('background', 'orange');
             },
             out: function(event, ui) {
                 $(this).css('background', 'cyan');
+            }
+        });
+        $("#right_dropzone").droppable({
+            drop: function(event, ui) {
+                $(this).css('background', 'rgb(0,200,0)');
+            }
+        });
+        $("#wrong_dropzone").droppable({
+            drop: function(event, ui) {
+                $(this).css('background', 'rgb(200,0,0)');
             }
         });
     </script>
