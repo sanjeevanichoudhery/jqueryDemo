@@ -22,6 +22,7 @@
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
     <div>Drag Winston into the rectangle</div>
     <img id="winston" src="https://www.kasandbox.org/programming-images/creatures/Winston.png">
+    <img id="winston2" src="https://www.kasandbox.org/programming-images/creatures/Winston.png">
     <div style = "float:left;">
         <div class= "dropzone" id="right_dropzone"></div>
         <div class= "dropzone" id="wrong_dropzone"></div>
@@ -30,6 +31,7 @@
 
     <script>
         $("#winston").draggable();
+        $("#winston2").draggable();
         $(".dropzone").droppable({
             over: function(event, ui) {
                 $(this).css('background', 'orange');
@@ -41,6 +43,9 @@
         $("#right_dropzone").droppable({
             drop: function(event, ui) {
                 $(this).css('background', 'rgb(0,200,0)');
+                var $el = ui.draggable;
+                var  pid= $el.attr("id");
+                $('#'+pid).draggable("disable");
             }
         });
         $("#wrong_dropzone").droppable({
