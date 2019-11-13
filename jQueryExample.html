@@ -8,52 +8,59 @@
                 font-size: 32px;
             }
             
-            .dropzone {
-                top: 150px;
-                width: 200px;
-                height: 200px;
+            .question{
+                font-size: 15px;
+                outline-style: solid;
+                display: inline-block;
                 background: cyan;
-                border: solid 1px;
+                margin: 20px;
+                width: 150px;
+            }
+
+            .answer{
+                font-size: 15px;
+                margin: 20px;
+                width: 150px;
             }
         </style>
     </head>
     <body>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
-    <div>Drag Winston into the rectangle</div>
-    <img id="winston" src="https://www.kasandbox.org/programming-images/creatures/Winston.png">
-    <img id="winston2" src="https://www.kasandbox.org/programming-images/creatures/Winston.png">
-    <div style = "float:left;">
-        <div class= "dropzone" id="right_dropzone"></div>
-        <div class= "dropzone" id="wrong_dropzone"></div>
+    <script type="text/javascript" src="DD_slide38.js"></script>
+    <div>Drag answers into the blanks</div>
+    <img id="cell_pic" src="./slide_38.jpg">
+    <div style = "float : right">
+        <div class = "answer" id = "1">mitochondria</div>
+        <div class = "answer" id = "2">Cytosol</div>
+        <div class = "answer" id = "3">Cytoskeleton</div>
+        <div class = "answer" id = "4">Lysosome</div>
+        <div class = "answer" id = "5">smooth endoplasmic</div>
+        <div class = "answer" id = "6">reticulum</div>
+        <div class = "answer" id = "7">Golgi apparatus</div>
+        <div class = "answer" id = "8">Nucleus</div>
+        <div class = "answer" id = "9">Vesicles</div>
+        <div class = "answer" id = "10">plasma membrane</div>
+        <div class = "answer" id = "11">rough endoplasmic</div>
+        <div class = "answer" id = "12">reticulum</div>
+        <div class = "answer" id = "13">ribosome</div>
     </div>
-
-
-    <script>
-        $("#winston").draggable();
-        $("#winston2").draggable();
-        $(".dropzone").droppable({
-            over: function(event, ui) {
-                $(this).css('background', 'orange');
-            },
-            out: function(event, ui) {
-                $(this).css('background', 'cyan');
-            }
-        });
-        $("#right_dropzone").droppable({
-            drop: function(event, ui) {
-                $(this).css('background', 'rgb(0,200,0)');
-                var $el = ui.draggable;
-                var  pid= $el.attr("id");
-                $('#'+pid).draggable("disable");
-            }
-        });
-        $("#wrong_dropzone").droppable({
-            drop: function(event, ui) {
-                $(this).css('background', 'rgb(200,0,0)');
-            }
-        });
-    </script>
+        <div style = "float : right">
+        <div class = "question">1</div>
+        <div class = "question">2</div>
+        <div class = "question">3</div>
+        <div class = "question">4</div>
+        <div class = "question">5</div>
+        <div class = "question">6</div>
+        <div class = "question">7</div>
+        <div class = "question">8</div>
+        <div class = "question">9</div>
+        <div class = "question">10</div>
+        <div class = "question">11</div>
+        <div class = "question">12</div>
+        <div class = "question">13</div>
+    </div>
+    <button id="submit">Submit</button>
     
     </body>
 </html>
