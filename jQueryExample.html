@@ -11,16 +11,15 @@
             .question{
                 font-size: 15px;
                 outline-style: solid;
-                display: inline-block;
                 background: cyan;
                 margin: 20px;
-                width: 150px;
+                width: 250px;
             }
 
             .answer{
                 font-size: 15px;
                 margin: 20px;
-                width: 150px;
+                width: 250px;
             }
         </style>
     </head>
@@ -28,24 +27,24 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
     <script type="text/javascript" src="DD_slide38.js"></script>
-    <div>Drag answers into the blanks</div>
-    <img id="cell_pic" src="./slide_38.jpg">
-    <div style = "float : right">
-        <div class = "answer" id = "1">mitochondria</div>
-        <div class = "answer" id = "2">Cytosol</div>
-        <div class = "answer" id = "3">Cytoskeleton</div>
-        <div class = "answer" id = "4">Lysosome</div>
-        <div class = "answer" id = "5">smooth endoplasmic</div>
-        <div class = "answer" id = "6">reticulum</div>
-        <div class = "answer" id = "7">Golgi apparatus</div>
-        <div class = "answer" id = "8">Nucleus</div>
-        <div class = "answer" id = "9">Vesicles</div>
-        <div class = "answer" id = "10">plasma membrane</div>
-        <div class = "answer" id = "11">rough endoplasmic</div>
-        <div class = "answer" id = "12">reticulum</div>
-        <div class = "answer" id = "13">ribosome</div>
+    <div>
+    <div style="float : left; width: 450px; overflow: hidden">
+        <img width="600" src="./slide_38.jpg">
     </div>
-        <div style = "float : right">
+    <div style = "float : left">
+        <div class = "answer" id = "4">Mitochondria</div>
+        <div class = "answer" id = "3">Cytosol</div>
+        <div class = "answer" id = "2">Cytoskeleton</div>
+        <div class = "answer" id = "1">Lysosome</div>
+        <div class = "answer" id = "11">Smooth endoplasmic reticulum</div>
+        <div class = "answer" id = "10">Golgi apparatus</div>
+        <div class = "answer" id = "9">Nucleus</div>
+        <div class = "answer" id = "8">Vesicles</div>
+        <div class = "answer" id = "7">Plasma membrane</div>
+        <div class = "answer" id = "6">Rough endoplasmic Reticulum</div>
+        <div class = "answer" id = "5">Ribosome</div>
+    </div>
+    <div style = "float : left">
         <div class = "question">1</div>
         <div class = "question">2</div>
         <div class = "question">3</div>
@@ -59,6 +58,7 @@
         <div class = "question">11</div>
         <div class = "question">12</div>
         <div class = "question">13</div>
+    </div>
     </div>
     <button id="submit">Submit</button>
     
